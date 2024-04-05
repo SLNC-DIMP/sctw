@@ -8,9 +8,9 @@
 # URL VARIABLES
 #
 # site domain, full URL to the production location of your collection
-url: https://slncghl.github.io
+url: https://she-changed-world.cb.ncpedia.org/
 # path to location on the domain if necessary e.g. /digital/hjccc
-baseurl: /sctw
+# baseurl: 
 # location of code, the full url to your github repository
 source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 
@@ -25,9 +25,9 @@ tagline: North Carolina Women Breaking Barriers
 # this description might appear in search result lists, keep around 160 characters max
 description: "This collection includes previously digitized state publications, photographs, letters, oral histories, posters, and other materials related to women's history in North Carolina."
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
-keywords: idaho;history;inland northwest
+keywords: north carolina;history;women
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: Andrea Smythe
+# author: Andrea Smythe
 
 ##########
 # COLLECTION SETTINGS
@@ -60,7 +60,7 @@ organization-logo-nav: /assets/img/logo_ncdc_white.png
 #
 # leave these blank or comment out to NOT include google code
 # if present, used to add analytics during "production" build only
-# google-analytics-id: "G-XXXXXXXXX"
+ google-analytics-id: "G-XXHTXJRYKS"
 # google-cse-id: "002151703305773322890:1pu3smhw1t8"
 
 ##########
