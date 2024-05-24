@@ -28,7 +28,11 @@ custom-foot: js/timeline-js.html
     {%- endif -%}{% unless forloop.last %}-{% endunless -%}
   {%- endif -%}
 {% endfor %}
-{{ roundYears }}
+{% for year in roundYears -%}
+  {%- if forloop.length > 0 -%}
+    {{ year }}{% unless forloop.last %}-{% endunless -%}
+  {%- endif -%}
+{% endfor %}
 {%- if site.data.theme.year-navigation -%}
 {%- assign navYears = site.data.theme.year-navigation | split: ";" -%}
 {%- elsif site.data.theme.year-nav-increment -%}
