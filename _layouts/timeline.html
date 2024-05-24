@@ -13,26 +13,6 @@ custom-foot: js/timeline-js.html
 {%- assign raw-dates = items | map: field | compact | uniq -%}
 {%- capture clean-years -%}{% for date in raw-dates %}{% if date contains "-" %}{{ date | strip | split: "-" | first }}{% elsif date contains "/" %}{{ date | strip | split: "/" | last }}{% else %}{{ date | strip }}{% endif %}{% unless forloop.last %};{% endunless %}{%- endfor -%}{%- endcapture -%}
 {%- assign uniqueYears = clean-years | remove: " " | replace: ";;",";" | split: ";" | uniq | sort -%}
-{% for year in uniqueYears -%}
-  {%- if forloop.length > 0 -%}
-    {% if uniqueYears >= 1860 and uniqueYears < 1870 %}
-	{%- assign roundYears = 1860 -%}
-	{%- else uniqueYears >= 1870 and uniqueYears < 1880 -%}
-	{%- assign roundYears = 1870 -%}
-	{% else uniqueYears >= 1880 and uniqueYears < 1890 %}
-	{%- assign roundYears = 1880 -%}
-	{% else uniqueYears >= 1890 and uniqueYears < 1900 %}
-	{%- assign roundYears = 1890 -%}
-	{% else uniqueYears >= 1900 and uniqueYears < 1910 %}
-	{%- assign roundYears = 1900 -%}
-    {%- endif -%}{% unless forloop.last %}-{% endunless -%}
-  {%- endif -%}
-{% endfor %}
-{% for year in roundYears -%}
-  {%- if forloop.length > 0 -%}
-    {{ year }}{% unless forloop.last %}-{% endunless -%}
-  {%- endif -%}
-{% endfor %}
 {%- if site.data.theme.year-navigation -%}
 {%- assign navYears = site.data.theme.year-navigation | split: ";" -%}
 {%- elsif site.data.theme.year-nav-increment -%}
