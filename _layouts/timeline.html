@@ -16,18 +16,19 @@ custom-foot: js/timeline-js.html
 {% for year in uniqueYears -%}
   {%- if forloop.length > 0 -%}
     {% if uniqueYears >= 1860 and uniqueYears < 1870 %}
-		{%- assign roundYears = 1860 -%}
-		{%- elseif uniqueYears >= 1870 and uniqueYears < 1880 -%}
-		{%- assign roundYears = 1870 -%}
-		{% elseif uniqueYears >= 1880 and uniqueYears < 1890 %}
-		{%- assign roundYears = 1880 -%}
-		{% elseif uniqueYears >= 1890 and uniqueYears < 1900 %}
-		{%- assign roundYears = 1890 -%}
-		{% elseif uniqueYears >= 1900 and uniqueYears < 1910 %}
-		{%- assign roundYears = 1900 -%}
-    {% endif %}{% unless forloop.last %}-{% endunless -%}
+	{%- assign roundYears = 1860 -%}
+	{%- else uniqueYears >= 1870 and uniqueYears < 1880 -%}
+	{%- assign roundYears = 1870 -%}
+	{% else uniqueYears >= 1880 and uniqueYears < 1890 %}
+	{%- assign roundYears = 1880 -%}
+	{% else uniqueYears >= 1890 and uniqueYears < 1900 %}
+	{%- assign roundYears = 1890 -%}
+	{% else uniqueYears >= 1900 and uniqueYears < 1910 %}
+	{%- assign roundYears = 1900 -%}
+    {%- endif -%}{% unless forloop.last %}-{% endunless -%}
   {%- endif -%}
 {% endfor %}
+{{ roundYears }}
 {%- if site.data.theme.year-navigation -%}
 {%- assign navYears = site.data.theme.year-navigation | split: ";" -%}
 {%- elsif site.data.theme.year-nav-increment -%}
