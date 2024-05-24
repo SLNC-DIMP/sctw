@@ -15,7 +15,7 @@ custom-foot: js/timeline-js.html
 {%- assign uniqueYears = clean-years | remove: " " | replace: ";;",";" | split: ";" | uniq | sort -%}
 {% for year in uniqueYears -%}
   {%- if forloop.length > 0 -%}
-    {% if year contains "189" %} {% increment my_counter %} {% assign roundYears[my_counter] = "1860" %} {{ roundYears[my_counter] }}
+    {% if year contains "186" %} {% assign roundYears = 1860 %} {{ roundYears }}
     
 
     {% endif %}{% unless forloop.last %}-{% endunless -%}
