@@ -15,7 +15,7 @@ custom-foot: js/timeline-js.html
 {%- assign uniqueYears = clean-years | remove: " " | replace: ";;",";" | split: ";" | uniq | sort -%}
 {% for year in uniqueYears -%}
   {%- if forloop.length > 0 -%}
-    {% if year >= "1860" and year == "1870" %} {{ year }} 
+    {% if year == "1860" or year == "1861" or year =="1862" or year == "1863" or year == "1864" or year == "1865" or year == "1866" or year == "1867" or year == "1868" or year == "1869" %} {{ year }} 
     {% endif %}{% unless forloop.last %}-{% endunless -%}
   {%- endif -%}
 {% endfor %}
