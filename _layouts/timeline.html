@@ -31,12 +31,11 @@ custom-foot: js/timeline-js.html
         <a class="dropdown-item" href="#y{{ y }}">{{ y }}</a>{% endfor %}
     </div>
 </div>
-
-<h3><a href="#y{{ navYears | first }}">{{ navYears | first }}</a> to <a href="#y{{ navYears | last }}">{{ navYears | last }}</a></h3>
 {%- endif -%}
 
 {{ content }}
 
+<h3><a href="#y{{ navYears | first }}">{{ navYears | first }}</a> to <a href="#y{{ navYears | last }}">{{ navYears | last }}</a></h3>
 <h3><a href="#y{{ uniqueYears | first }}">{{ uniqueYears | first }}</a> to <a href="#y{{ uniqueYears | last }}">{{ uniqueYears | last }}</a></h3>
 
 <table id="timeline" class="table table-striped">
