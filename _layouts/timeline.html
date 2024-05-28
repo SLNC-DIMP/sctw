@@ -17,10 +17,11 @@ custom-foot: js/timeline-js.html
 {%- assign navYears = site.data.theme.year-navigation | split: ";" -%}
 {%- elsif site.data.theme.year-nav-increment -%}
 {%- capture navYears -%}
-{%- for i in uniqueYears -%}{%- assign t = i | modulo: site.data.theme.year-nav-increment -%} {{ t }}
-{%- if t == 0 -%}{{ i }}{% unless forloop.last %};{% endunless %}{% endif %}{% endfor %}{%- endcapture -%}
+{%- for i in uniqueYears -%}{%- assign t = i | modulo: site.data.theme.year-nav-increment -%}
+{%- if t == 0 -%}{{ i }}{% unless forloop.last %};{% endunless %}{% endif %}{% endfor %}{%- endcapture -%} 
 {%- assign navYears = navYears | split: ";" -%}
 {%- endif -%}
+{%- assign roundYears = "186;189;190;191;192;193;194;195;196;197;199;200;201" | split: ";"  -%}
 {%- if navYears -%}
 <div class="dropdown float-end" id="year-nav">
     <button class="btn btn-primary dropdown-toggle" type="button" id="yearButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,20 +36,20 @@ custom-foot: js/timeline-js.html
 
 {{ content }}
 
-<h3><a href="#y{{ uniqueYears | first }}">{{ uniqueYears | first }}</a> to <a href="#y{{ uniqueYears | last }}">{{ uniqueYears | last }}</a></h3>
+<h3><a href="#y{{ navYears | first }}">{{ navYears | first }}</a> to <a href="#y{{ navYears | last }}">{{ navYears | last }}</a></h3>
 
 <table id="timeline" class="table table-striped">
     <tbody>
-        {% for year in uniqueYears %}
-        <tr id="y{{ year }}">
+        {% for year in roundYears %}
+        <tr id="y{{ year | append: "0"}}">
             <th>
-                <h3>{{ year }}</h3>
+                <h3>{{ year | append: "0"}}</h3>
             </th>
             <td>
-                <div class="row">
-                    {%- assign inYear = items | where_exp: 'item', 'item[field] contains year' -%}
+                <div class="row">   
+                    {%- assign inYear = items | where_exp: 'item', 'item[field] contains year' -%} 
                     {% for item in inYear %}
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6"> 
                         <a href="{% if item.parentid == nil %}{{ '/items/' | append: item.objectid | append: '.html' | relative_url }}{% elsif item.parentid %}{{ '/items/' | append: item.parentid | append: '.html' | relative_url }}#{{item.objectid }}{% endif %}" >
                             {% if item.image_thumb %}
                             <img class="lazyload img-thumbnail timeline-thumb" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="{{ item.image_thumb | relative_url }}" alt="{{ item.image_alt_text | default: item.description | default: item.title | escape }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ item.title | escape }}">
