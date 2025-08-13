@@ -4,19 +4,25 @@ layout: about
 permalink: /about.html
 # include CollectionBuilder info at bottom
 credits: true
+# featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
+about-featured-image: /objects/43ashevillecannery.jpg
+# set background-position for featured image, "center", "top", "bottom"
+position: center
+# major heading to display over featured image
+heading: She Changed the World
+# paragraph text below heading in featured image
+sub-heading: North Carolina Women Breaking Barriers
+# additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
+padding: 6em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
-
-{% include feature/jumbotron.html objectid="/objects/43ashevillecannery.jpg" position="center" %} 
-
-{% include feature/nav-menu.html sections="About the Collection;Learn More" %}
 
 ## About the Collection
 
 This website pulls together previously digitized state publications, photographs, letters, oral histories, posters, and other materials available online.  The goal is to create a quick, easy to use introduction to women's history in North Carolina as part of "she Changed the World: NC Women Breaking Barriers," an initiative by the North Carolina Department of Natural and Cultural Resources.
 
-{% include feature/card.html header="New Homemakers of America: History--Executive Council and State Officers--Photographs" objectid="coll041" width="25" centered=true %}
+{% include feature/card.html header="New Homemakers of America: History--Executive Council and State Officers--Photographs" objectid="coll041" width="50" centered=true %}
 
 ## Learn More
 
