@@ -18,6 +18,9 @@ function getIcon(objectTemplate,objectFormat,svgType) {
     } else if (iconTemplate.includes("pdf")) {
         iconId = "icon-pdf";
         iconTitle = "pdf file icon";
+    } else if (iconTemplate.includes("book")) {
+        iconId = "icon-book";
+        iconTitle = "book icon";
     } else if (iconTemplate.includes("video")) {
         iconId = "icon-video";
         iconTitle = "video file icon";
