@@ -25,11 +25,11 @@ body {
 }
 a {
     /* remove link underline */ 
-    text-decoration: none;
+    text-decoration: underline;
     @if $link-color != "" { 
         color: $link-color; 
         &:hover {
-            text-decoration: underline;
+            text-decoration: none;
             @if $text-color != "" { color: $text-color; }
         }
     }
