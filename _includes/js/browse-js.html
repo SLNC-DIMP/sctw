@@ -60,11 +60,11 @@ function makeCard(obj) {
     
     // Image or icon
     if(obj.img) {
-        card += `<a href="${itemHref}"><img class="card-img-top lazyload" src="${placeholder}" data-src="${obj.img}" alt="${obj.alt || obj.title}"></a>`;
+        card += `<a href="${itemHref}" class="text-dark"><img class="card-img-top lazyload" src="${placeholder}" data-src="${obj.img}" alt="${obj.alt || obj.title}">`;
     }
     
     // Title
-    card += `<div class="card-body text-center"><h3 class="card-title h4"><a href="${itemHref}" class="text-dark">${obj.title}</a></h3>`;
+    card += `<div class="card-body text-center"><h3 class="card-title h4">${obj.title}</a></h3>`;
     
     // Icon for items without images
     if(!obj.img) {
