@@ -4,7 +4,7 @@
 
         <div class="col-md-7 px-4 mt-3">
 
-            <h2 class="h4"><a href="{{ '/' | relative_url }}" class="text-white">{{ site.title }}</a></h2>
+            <h2 class="h4 text-white">{{ site.title }}</h2>
             <p class="text-white"><small>{{ site.description }}</small></p>
             <nav>
                 <ul id="footer-nav" class="nav nav-pills ">
@@ -25,17 +25,16 @@
         </div>
 
         <div class="col-md-5 mt-3 text-center">
-
            {% if site.organization-logo-nav %} <p class="text-white text-md-end" id="footer-credits">
-                <a href="{{ site.organization-link }}" target="_blank" rel="noopener">
+                <a id="footer-logo" href="{{ site.organization-link }}" target="_blank" rel="noopener">
                     <img id="footer-logo" style="width: 195px;height:auto;padding-left:25px" id="footer-logo" class="img-fluid" src="{{ site.organization-logo-nav | relative_url }}" alt="{{ site.organization-name | escape }} home">
                 </a>
             {% endif %}
-            <a href="https://statelibrary.ncdcr.gov/" target="_blank" rel="noopener" title="State Library of North Carolina">
+            <a id="footer-logo" href="https://statelibrary.ncdcr.gov/" target="_blank" rel="noopener" title="State Library of North Carolina">
                 <img id="footer-logo" style="width: 195px;height:auto;" src="{{ '/assets/img/SLNC_title_wht.png' | relative_url }}" class="img-fluid" alt="Logo of State Library of North Carolina" >
             </a>
-            <a href="https://www.dncr.nc.gov/" target="_blank" rel="noopener" title="NC Department of Natural and Cultural Resources">
-                <img id="footer-logo" style="width: 195px;height:auto;" src="{{ 'https://files.nc.gov/dncr/DNCR%20Web%20Logo%201.png?VersionId=pBb30wGHrjSUb3FfMzjrp_C4WBGYBcgC' | relative_url }}" class="img-fluid" alt="Logo of NC Department of Natural and Cultural Resources" >
+            <a id="footer-logo" href="https://www.dncr.nc.gov/" target="_blank" rel="noopener" title="NC Department of Natural and Cultural Resources">
+                <img id="footer-logo" style="width: 195px;height:auto;" src="{{ '/assets/img/logo_dncr_new.png' | relative_url }}" class="img-fluid" alt="Logo of NC Department of Natural and Cultural Resources" >
             </a>
            </p>
             <p class="text-md-end">
@@ -45,8 +44,8 @@
             </p>
             <p class="text-white text-md-end" id="footer-credits">
                   <small><em>built with</em>
-                    <a href="https://collectionbuilder.github.io/" target="_blank" rel="noopener" title="CollectionBuilder">
-                        <img id="footer-logo" src="{{ '/assets/img/collectionbuilder-logo.png' | relative_url }}" class="img-fluid" alt="CollectionBuilder" >
+                    <a id="footer-logo" href="https://collectionbuilder.github.io/" target="_blank" rel="noopener" title="CollectionBuilder">
+                        <img src="{{ '/assets/img/collectionbuilder-logo.png' | relative_url }}" class="img-fluid" alt="CollectionBuilder" >
                     </a>
                 </small>
             </p>
