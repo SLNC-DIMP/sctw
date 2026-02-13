@@ -36,7 +36,11 @@ function getIcon(objectTemplate,objectFormat,svgType) {
     } else if (iconTemplate.includes("multiple")) {
         iconId = "icon-multiple";
         iconTitle = "multiple object icon";
-    } else if (iconTemplate.includes("record")) {
+    } else if (iconTemplate.includes("html")) {
+        iconId = "icon-html";
+        iconTitle = "html file icon";
+     }
+    else if (iconTemplate.includes("record")) {
         iconId = "icon-record";
         iconTitle = "record object icon";
     } else {
