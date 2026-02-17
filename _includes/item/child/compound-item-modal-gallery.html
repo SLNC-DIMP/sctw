@@ -94,7 +94,7 @@
                                                         {% if child.object_location contains 'vimeo' or child.object_location contains 'youtu' %}
                                                             {% include item/child/video-embed.html %}
                                                         {% else %}
-                                                            {% include item/child/video-player.html %}
+                                                            {% include item/child/item-thumb.html %}
                                                         {% endif %}
                                                     {% elsif child.display_template == 'audio' %}
                                                         <div class="my-auto">
