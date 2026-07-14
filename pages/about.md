@@ -33,6 +33,6 @@ The year 2020 marks the 100th anniversary of the passage of the 19th Amendment, 
 {% include feature/button.html text="Find Out More About 'She Changed the World'" link="https://www.dncr.nc.gov/about/featured-programs/she-changed-world-north-carolina-women-breaking-barriers" color="primary" centered="true" %}
 ---------------------------------------------------------------------------------------
 ## The North Carolina Digital Collections
-The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring together content from the State Archives of North Carolina and the State Library of North Carolina.
+The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring together content from the State Archives of North Carolina and the Library of North Carolina.
 {% include feature/button.html text="Find Out More About the NC Digital Collections" link="https://digital.ncdcr.gov/about" color="secondary" centered="true" %}
 
